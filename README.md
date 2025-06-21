@@ -160,10 +160,12 @@ change the height and width for each of the contributors from 80 to 50.
 --->
 
 [//]: contributor-faces
-<a href="https://github.com/fabiobrasileiroo"><img src="https://avatars.githubusercontent.com/u/99563281?v=4" title="Fabio Brasileiro" width="50" height="50"></a>
-<a href="https://github.com/iddan"><img src="https://avatars.githubusercontent.com/u/3150554?v=4" title="Samuelson" width="50" height="50"></a>
 
-[//]: contributor-faces
+![GitHub contributors](https://img.shields.io/github/contributors/JavaAmazonas/java-amazonas)
+
+<a href="https://github.com/JavaAmazonas/java-amazonas/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=JavaAmazonas/java-amazonas" />
+</a>
 
 ## License
 
