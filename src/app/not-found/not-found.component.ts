@@ -3,11 +3,10 @@ import { HeaderLandingPageComponent } from '../page/header-landing-page/header-l
 import { FooterComponent } from '../page/footer/footer.component';
 
 @Component({
-  selector: 'app-not-found',
-  standalone: true,
-  imports: [HeaderLandingPageComponent,FooterComponent],
-  templateUrl: './not-found.component.html',
-  styleUrl: './not-found.component.css'
+    selector: 'app-not-found',
+    imports: [HeaderLandingPageComponent, FooterComponent],
+    templateUrl: './not-found.component.html',
+    styleUrl: './not-found.component.css'
 })
 export class NotFoundComponent {
 

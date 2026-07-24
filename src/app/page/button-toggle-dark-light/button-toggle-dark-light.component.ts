@@ -1,11 +1,10 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-button-toggle-dark-light',
-  standalone: true,
-  imports: [],
-  templateUrl: './button-toggle-dark-light.component.html',
-  styleUrl: './button-toggle-dark-light.component.css'
+    selector: 'app-button-toggle-dark-light',
+    imports: [],
+    templateUrl: './button-toggle-dark-light.component.html',
+    styleUrl: './button-toggle-dark-light.component.css'
 })
 export class ButtonToggleDarkLightComponent implements OnInit{
   sunIcon: HTMLElement | null = null;

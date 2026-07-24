@@ -3,11 +3,10 @@ import { ButtonToggleDarkLightComponent } from '../button-toggle-dark-light/butt
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-header-landing-page',
-  standalone: true,
-  imports: [ButtonToggleDarkLightComponent,NgClass],
-  templateUrl: './header-landing-page.component.html',
-  styleUrl: './header-landing-page.component.css',
+    selector: 'app-header-landing-page',
+    imports: [ButtonToggleDarkLightComponent, NgClass],
+    templateUrl: './header-landing-page.component.html',
+    styleUrl: './header-landing-page.component.css'
 })
 export class HeaderLandingPageComponent {
    activeLink: any= 'inicio';

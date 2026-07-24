@@ -13,18 +13,17 @@ import { NgClass } from '@angular/common';
 // import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-landing-page-inicio',
-  standalone: true,
-  imports: [
-    HeaderLandingPageComponent,
-    FooterComponent,
-    SliderEventComponent,
-    FontAwesomeModule,
-    FormsModule,
-    NgClass,
-  ],
-  templateUrl: './landing-page-inicio.component.html',
-  styleUrl: './landing-page-inicio.component.css',
+    selector: 'app-landing-page-inicio',
+    imports: [
+        HeaderLandingPageComponent,
+        FooterComponent,
+        SliderEventComponent,
+        FontAwesomeModule,
+        FormsModule,
+        NgClass,
+    ],
+    templateUrl: './landing-page-inicio.component.html',
+    styleUrl: './landing-page-inicio.component.css'
 })
 export class LandingPageInicioComponent {
   isOpen1 = false;

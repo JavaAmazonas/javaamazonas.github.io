@@ -12,11 +12,10 @@ import { CommonModule } from '@angular/common';
 // import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-slider-event',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './slider-event.component.html',
-  styleUrl: './slider-event.component.css',
+    selector: 'app-slider-event',
+    imports: [FormsModule, CommonModule],
+    templateUrl: './slider-event.component.html',
+    styleUrl: './slider-event.component.css'
 })
 export class SliderEventComponent {
   @Input() cards: any[] = [
