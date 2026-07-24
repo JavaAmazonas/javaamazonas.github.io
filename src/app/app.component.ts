@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LandingPageInicioComponent } from './page/landing-page-inicio/landing-page-inicio.component';
 import { HeaderLandingPageComponent } from './page/header-landing-page/header-landing-page.component';
@@ -13,6 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
         NotFoundComponent,
     ],
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {

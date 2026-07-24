@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, input, Output, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonToggleDarkLightComponent } from '../button-toggle-dark-light/button-toggle-dark-light.component';
 import { NgClass } from '@angular/common';
 
@@ -6,6 +6,7 @@ import { NgClass } from '@angular/common';
     selector: 'app-header-landing-page',
     imports: [ButtonToggleDarkLightComponent, NgClass],
     templateUrl: './header-landing-page.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './header-landing-page.component.css'
 })
 export class HeaderLandingPageComponent {

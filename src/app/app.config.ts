@@ -8,7 +8,7 @@ import {
 
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideHttpClient, withJsonpSupport } from '@angular/common/http';
+import { provideHttpClient, withJsonpSupport, withXhr } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({scrollPositionRestoration: 'enabled'})
     ),
     provideAnimationsAsync(),
-    provideHttpClient(withJsonpSupport())
+    provideHttpClient(withXhr(), withJsonpSupport())
   ],
 };
