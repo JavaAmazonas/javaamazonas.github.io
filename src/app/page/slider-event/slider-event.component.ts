@@ -8,12 +8,12 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 // import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-slider-event',
-    imports: [FormsModule, CommonModule],
+    imports: [FormsModule],
     templateUrl: './slider-event.component.html',
     styleUrl: './slider-event.component.css'
 })
