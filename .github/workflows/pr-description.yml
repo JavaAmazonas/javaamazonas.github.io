@@ -39,9 +39,8 @@ jobs:
             com base apenas no diff fornecido. Use as seções "## Resumo" e "## Mudanças"
             (lista de bullets). Seja direto, sem inventar contexto que não esteja no diff.
           prompt-file: pr.diff
-          response-file: description.md
 
       - name: Atualizar descrição do PR
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh pr edit "${{ github.event.pull_request.number }}" --body-file description.md
+        run: gh pr edit "${{ github.event.pull_request.number }}" --body-file "${{ steps.inference.outputs.response-file }}"
