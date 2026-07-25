@@ -8,13 +8,10 @@ import {
   EventEmitter,
   ChangeDetectionStrategy
 } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-// import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-slider-event',
-    imports: [FormsModule],
+    imports: [],
     templateUrl: './slider-event.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './slider-event.component.css'

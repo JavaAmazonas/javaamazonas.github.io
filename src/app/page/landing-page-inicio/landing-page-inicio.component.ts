@@ -2,15 +2,7 @@ import { Component, ElementRef, EventEmitter, OnInit, output, Output, ChangeDete
 import { HeaderLandingPageComponent } from '../header-landing-page/header-landing-page.component';
 import { FooterComponent } from '../footer/footer.component';
 import { SliderEventComponent } from '../slider-event/slider-event.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { FormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
-
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
-
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'app-landing-page-inicio',
@@ -18,8 +10,6 @@ import { NgClass } from '@angular/common';
         HeaderLandingPageComponent,
         FooterComponent,
         SliderEventComponent,
-        FontAwesomeModule,
-        FormsModule,
         NgClass,
     ],
     templateUrl: './landing-page-inicio.component.html',

@@ -14,13 +14,8 @@
     "@angular/common": "^22.0.8",
     "@angular/compiler": "^22.0.8",
     "@angular/core": "^22.0.8",
-    "@angular/forms": "^22.0.8",
     "@angular/platform-browser": "^22.0.8",
-    "@angular/platform-browser-dynamic": "^22.0.8",
     "@angular/router": "^22.0.8",
-    "@fortawesome/angular-fontawesome": "^5.1.0",
-    "angular-font-awesome": "^3.1.2",
-    "express": "^4.19.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.1"
