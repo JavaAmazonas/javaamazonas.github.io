@@ -1,0 +1,47 @@
+name: Gerar descrição do PR com IA
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  models: read
+
+jobs:
+  describe:
+    # Só gera a descrição se o autor não tiver escrito nada.
+    if: github.event.pull_request.body == '' || github.event.pull_request.body == null
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Gerar diff do PR
+        run: |
+          git fetch origin "${{ github.event.pull_request.base.ref }}" --depth=1
+          git diff "origin/${{ github.event.pull_request.base.ref }}...HEAD" \
+            -- . ':(exclude)package-lock.json' ':(exclude)*.lock' \
+            > pr.diff
+          # Evita estourar o limite de tokens do modelo em PRs muito grandes.
+          head -c 20000 pr.diff > pr.diff.trunc && mv pr.diff.trunc pr.diff
+
+      - name: Gerar descrição com GitHub Models
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          model: openai/gpt-4o-mini
+          system-prompt: |
+            Você escreve descrições de Pull Request em português do Brasil, em Markdown,
+            com base apenas no diff fornecido. Use as seções "## Resumo" e "## Mudanças"
+            (lista de bullets). Seja direto, sem inventar contexto que não esteja no diff.
+          prompt-file: pr.diff
+          response-file: description.md
+
+      - name: Atualizar descrição do PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr edit "${{ github.event.pull_request.number }}" --body-file description.md
