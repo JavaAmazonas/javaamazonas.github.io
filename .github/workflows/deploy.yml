@@ -1,0 +1,71 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between an
+# in-progress run and the latest queued one. Cancelling in-progress runs
+# is not desired here to avoid a broken/partial Pages deployment.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (production)
+        run: npm run build -- --configuration production
+
+      # GitHub Pages ignores files/folders starting with "_" unless this
+      # marker is present, and it also skips its Jekyll build step.
+      - name: Disable Jekyll processing
+        run: touch dist/java-amazonas/browser/.nojekyll
+
+      # The app uses the Angular Router with PathLocationStrategy (HTML5
+      # push-state). GitHub Pages has no server-side rewrites, so a direct
+      # load/refresh on any non-root URL returns GitHub's own 404 page.
+      # Serving a copy of index.html as 404.html lets GitHub Pages hand the
+      # request back to the Angular app, which then renders the app's own
+      # NotFoundComponent (wildcard route) for unknown paths.
+      - name: Add SPA fallback (404.html)
+        run: cp dist/java-amazonas/browser/index.html dist/java-amazonas/browser/404.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/java-amazonas/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
