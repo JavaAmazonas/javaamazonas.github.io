@@ -25,7 +25,7 @@
     "@angular/cli": "^22.0.8",
     "@angular/compiler-cli": "^22.0.8",
     "@types/jasmine": "~5.1.0",
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.5.4",
     "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
