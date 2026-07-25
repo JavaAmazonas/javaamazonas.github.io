@@ -16,6 +16,7 @@
     "@angular/core": "^22.0.8",
     "@angular/platform-browser": "^22.0.8",
     "@angular/router": "^22.0.8",
+    "@tailwindcss/postcss": "^4.3.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.16.2"
@@ -25,7 +26,6 @@
     "@angular/cli": "^22.0.8",
     "@angular/compiler-cli": "^22.0.8",
     "@types/jasmine": "~6.0.0",
-    "autoprefixer": "^10.5.4",
     "istanbul-lib-instrument": "^6.0.3",
     "jasmine-core": "~6.3.0",
     "karma": "~6.4.4",
@@ -34,7 +34,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.2.0",
     "postcss": "^8.5.23",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "~6.0.3"
   }
 }
