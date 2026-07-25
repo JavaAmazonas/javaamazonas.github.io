@@ -23,9 +23,6 @@ updates:
       - "dependencies"
       - "dependabot"
 
-    reviewers:
-      - "SEU_USUARIO_GITHUB"
-
     groups:
       angular:
         patterns:
