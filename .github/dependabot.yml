@@ -23,8 +23,27 @@ updates:
       - "dependencies"
       - "dependabot"
 
-    reviewers:
-      - "SEU_USUARIO_GITHUB"
+    groups:
+      angular:
+        patterns:
+          - "@angular/*"
+          - "zone.js"
+          - "rxjs"
+          - "tslib"
+        update-types:
+          - "minor"
+          - "patch"
+
+      dev-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+
+      security-updates:
+        applies-to: "security-updates"
+        patterns:
+          - "*"
 
     ignore:
       - dependency-name: "@angular/*"
