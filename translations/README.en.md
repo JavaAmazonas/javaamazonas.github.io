@@ -1,3 +1,5 @@
+<p align="center"><a href="../README.md">🇧🇷 Português (Brasil)</a> · <a href="Translations.md">🌐 Other languages</a></p>
+
 <p align="center">
   <img width="250" src="https://github.com/JavaAmazonas/java-amazonas/assets/99563281/32d2c100-29f9-42f1-a49b-58ffcc678dd5" alt="java_AM_no_sides">
 </p>
@@ -15,11 +17,9 @@
   </a>
 </h4>
 
-<div align="center">
-  
-  ![Screenshot from 2024-03-31 10-27-10](https://github.com/JavaAmazonas/java-amazonas/assets/99563281/d0b733e3-ba70-43ee-a8d7-a15e91077a9d)
-
-</div>
+<p align="center">
+    <a href="https://javaamazonas.com.br/" target="_blank"><img style="margin: 10px" height="500" width="800" src="https://github.com/JavaAmazonas/java-amazonas/assets/99563281/d0b733e3-ba70-43ee-a8d7-a15e91077a9d" alt="Java Amazonas"/></a>
+</p>
 
 ## Resources
 
@@ -32,16 +32,16 @@
 <a name="contributing_anchor"></a>
 ## Contributing
 
-```sh
+```
 git clone https://github.com/JavaAmazonas/java-amazonas.git
 ```
 
-```sh
+```
 npm install
 ```
 
-```sh
-ng serve 
+```
+ng serve
 ```
 
 Java Amazonas web is an open-source project. We are committed to a fully transparent development process and greatly appreciate any contribution. Whether you are helping us fix bugs, proposing new features, improving our documentation, or spreading the word, we would love to have you as part of the Java Amazonas community. We also plan to create a blog in the future.
@@ -52,9 +52,24 @@ Java Amazonas web is an open-source project. We are committed to a fully transpa
 
 Not sure where to start? Join our Discord and we'll help you get started!
 
-<a href="https://discord.com/invite/drYCpFH75g"><img src="https://amplication.com/images/discord_banner_purple.svg" /></a>
+<p align="center">
+    <a href="https://discord.com/invite/drYCpFH75g" target="_blank"><img style="margin: 10px" height="100" width="300" src="../doc/logos/discord-logo-1.svg" alt="Logo Discord"/></a>
+</p>
 
+## Contributors
+
+<!---
 npx contributor-faces --exclude "*bot*" --limit 70 --repo "https://github.com/JavaAmazonas/java-amazonas"
 
 change the height and width for each of the contributors from 80 to 50.
 --->
+
+![GitHub contributors](https://img.shields.io/github/contributors/JavaAmazonas/java-amazonas)
+
+<a href="https://github.com/JavaAmazonas/java-amazonas/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=JavaAmazonas/java-amazonas" />
+</a>
+
+## License
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=54D300&height=120&section=footer"/>
